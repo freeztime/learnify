@@ -9,7 +9,7 @@ RUN echo "https://dl.bintray.com/php-alpine/v3.11/php-7.3" >> /etc/apk/repositor
 
 # Install packages
 RUN apk --no-cache add php php-fpm php-opcache php-openssl php-curl \
-    php-gd php-bcmath php-intl php-mbstring \
+    php-gd php-bcmath php-intl php-mbstring php-mysqli \
     nginx supervisor curl
 
 # https://github.com/codecasts/php-alpine/issues/21
