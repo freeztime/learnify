@@ -362,13 +362,13 @@ $config['encryption_key'] = getenv('ENCRYPTION_KEY') ? getenv('ENCRYPTION_KEY') 
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
  */
-$config['sess_driver'] = 'redis';
+$config['sess_driver'] = 'database';
 $config['sess_cookie_name'] = 'learnify_session';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = getenv('REDIS_HOST') ? getenv('REDIS_HOST') : null;
-$config['sess_match_ip'] = true;
+$config['sess_save_path'] = 'sessions';
+$config['sess_match_ip'] = TRUE;
 $config['sess_time_to_update'] = 300;
-$config['sess_regenerate_destroy'] = false;
+$config['sess_regenerate_destroy'] = FALSE;
 /*
 |--------------------------------------------------------------------------
 | Cookie Related Variables
